@@ -20,7 +20,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'material',
+    'material.admin',
+    
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -44,7 +46,7 @@ ROOT_URLCONF = 'TechBiteNPlay.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,3 +118,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MATERIAL_ADMIN_SITE = {
+    'HEADER':  'TechBiteNPlay admin login',  # Admin site header
+    'TITLE':  'TechBiteNPlay',  # Admin site title
+    #'MAIN_BG_COLOR':  'seagreen',
+    #'MAIN_HOVER_COLOR':  'gray'
+    
+}

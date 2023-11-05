@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}
+welcome to TechBiteNPlay
+{% endblock %}
+
+{% block content %}
+
+<div class="" style=" width: 90% !important; margin:auto;">
+
+    <div class="owl-carousel">
+     
+        {% for cat in cats %} 
+        
+        <div class="card" style="margin-right:20px; border: 1px solid black;">
+        
+            <div>
+
+                <img src="/media/{{cat.image}}" class="responsive-img">
+
+            </div>
+            <div class="card-content">
+                <div class="card-title">
+                    {{cat.title}}
+                </div>
+
+                <p class="truncate">
+                    {{cat.description}}
+                </p>
+                <div class="container center-align mt20"> 
+                    <a href="" class="btn bg-primary">View</a>
+    
+                </div>
+    
+            </div>
+           
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+ 
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+
+            {% for p in posts %}
+
+            <div class="row">
+               <div class="col m8">
+
+                     {{p.content |truncatewords:60 | safe}}
+
+                 <div class="mt20">
+                    <a href="/blog/{{p.url}}" class="btn ">Read More..</a>
+                 </div>
+              </div>
+              <div class="col s12 m4">
+                <img src="/media/{{p.image}}"  class="responsive-img" style="margin-top: 60px;">
+            </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}
