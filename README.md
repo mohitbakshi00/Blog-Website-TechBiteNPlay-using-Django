@@ -7,3 +7,6 @@ Provided an admin panel with login authentication for adding new articles to the
 
 
 ![admin_panel](https://github.com/mohitbakshi00/Blog-Website-TechBiteNPlay-using-Django/assets/55908847/1b553783-0010-4ae6-92d9-43c4d6582032)
+
+
+![post](https://github.com/mohitbakshi00/Blog-Website-TechBiteNPlay-using-Django/assets/55908847/4854b199-5226-4020-b7d9-b17911b1e032)
