@@ -6,4 +6,24 @@ welcome to TechBiteNPlay
 
 {% block content %}
 
+<div style="width:95%!important; margin:auto;">
+    <h3>{{cat.title}}</h3>
+       <div class="">
+
+           <img src="/media/{{cat.image}}" class="responsive-img" style="max-height:500px; width:100%; object-fit:cover;" alt="">
+       </div>
+
+       <div class="collection">
+        {% for p in posts %}
+        <a href="/blog/{{p.url}}" class="collection-item">{{p.title}}</a>
+         
+        {% empty %}
+        <h2>No posts currently</h2>
+      
+        {% endfor %}
+      </div>
+              
+   
+</div>
+
 {% endblock %}
